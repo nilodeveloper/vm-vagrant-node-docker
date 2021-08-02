@@ -6,7 +6,7 @@ SCRIPT
 
 Vagrant.configure("2") do |config| 
 	config.vm.box = "hashicorp/bionic64"
-	config.vm.network "forwarded_port", guest: 3000, host: 3000
+	config.vm.network "forwarded_port", guest: 3000, host: 5000
 	config.vm.provision "file", source: "./server.js", destination: "server.js"
 	config.vm.provision "file", source: "./docker-compose.yaml", destination: "docker-compose.yaml"
 	config.vm.provision "file", source: "./Dockerfile", destination: "Dockerfile"
